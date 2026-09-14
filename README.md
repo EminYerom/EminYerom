@@ -1,39 +1,36 @@
 # Emin Yeromian
 
-**CompTIA CySA+ · Security+**  
-Security operations · Threat detection · Log analysis
+**CompTIA CySA+ · Security+**
 
-I’m developing my cybersecurity practice through guided labs and independent study, with a focus on understanding suspicious activity, checking the evidence, and writing clear incident reports. My leadership background also brings experience in problem solving, prioritization, and communication.
+I’m building practical experience in security operations through a Raspberry Pi home lab and a guided Azure honeypot project. This portfolio covers what I’ve been working on, including the parts that took more than one attempt.
 
-## Current case study
+## Projects
 
-### Azure Honeypot Investigation: MySQL Extortion Activity
+### Raspberry Pi security monitoring lab
 
-A guided cyber range lab examining malicious database activity on a Windows host in Azure. The investigation brief draws on MySQL query and connection logs, Microsoft Defender for Endpoint exports, and a screenshot of a stored ransom note.
+I started with one Raspberry Pi running Kali and Wazuh. As the plan changed, I split the setup into a dedicated Ubuntu monitoring hub and a separate Kali workstation. I wanted the hub to stay home and collect logs while keeping the workstation available for other lab work.
 
-- **Investigation:** Correlates database sessions with destructive SQL statements and ransom-note activity.
-- **Evidence quality:** Identifies misleading authentication labels and explains why reused connection IDs need time and host context.
-- **Reporting:** Separates supported findings from unanswered questions about data theft, remote access, and recovery.
+The monitoring setup brings together Wazuh, Suricata, Zeek, and Pi-hole. The hub moved from microSD to NVMe storage and uses mirrored network traffic, with separate interfaces for capture and management.
 
-A sanitized case study is available on request through [LinkedIn](https://www.linkedin.com/in/eminyeromian/). This is a training project; the brief includes retrospective analysis prepared with AI assistance.
+My September project notes record a test alert reaching Wazuh. They also cover the changes to the original plan and the troubleshooting behind them. At that review, workstation recovery and some alert tuning were still open.
 
-## Technical focus
+### Azure honeypot investigation
 
-| Area | Current focus |
-| --- | --- |
-| Security operations | Log review, event correlation, incident timelines |
-| Detection and investigation | Microsoft Sentinel, KQL, Microsoft Defender for Endpoint |
-| Foundations | Linux, vulnerability management, threat intelligence |
-| Communication | Evidence-based findings, clear limitations, practical next steps |
+A guided cyber range project focused on MySQL activity on a Windows host in Azure. The case study follows database sessions containing destructive SQL statements and ransom-note activity, using query logs and Defender for Endpoint exports.
 
-These are areas of study and lab practice. Projects document the evidence available and the scope of work performed.
+The report separates what the evidence shows from what remains uncertain. A stored ransom note supports an extortion finding; it does not, by itself, prove data theft. The available Windows logons also do not establish an RDP compromise.
 
-## Credentials
+## Tools I’m working with
+
+- **Home lab:** Linux, Wazuh, Suricata, Zeek, Pi-hole
+- **Azure lab and study:** Microsoft Sentinel, Defender for Endpoint, KQL, MySQL logs
+
+## Certifications
 
 - CompTIA Cybersecurity Analyst (CySA+)
 - CompTIA Security+
 - Google Cybersecurity Certificate
 
-## Connect
+## Contact
 
-[LinkedIn — Emin Yeromian](https://www.linkedin.com/in/eminyeromian/)
+[Connect with me on LinkedIn](https://www.linkedin.com/in/eminyeromian/). Project summaries with private details removed are available on request.
