@@ -1,32 +1,39 @@
-# <a href="https://www.linkedin.com/in/eminyeromian/">Emin Yeromian</a>'s IT and Cybersecurity Project Portfolio 🔐
+# Emin Yeromian
 
-I'm passionate about cybersecurity and love tackling complex challenges through hands-on projects. From vulnerability management to threat detection, these projects allow me to dive deep into the ever-evolving landscape of cybersecurity. Please feel free to check them out and see the work I’ve put into enhancing security operations and processes!
+**CompTIA CySA+ · Security+**  
+Security operations · Threat detection · Log analysis
 
+I’m developing my cybersecurity practice through guided labs and independent study, with a focus on understanding suspicious activity, checking the evidence, and writing clear incident reports. My leadership background also brings experience in problem solving, prioritization, and communication.
 
-## ⚠️ Vulnerability Management Projects
+## Current case study
 
-- **[Vulnerability Management Program Implementation](https://github.com/joshcybertest/vulnerability-management-program)**
-- **[Programmatic Vulnerability Remediations (PowerShell, BASH, & Shell Commands)](https://github.com/joshcybertest/programmatic-vulnerability-remediations)**
+### Azure Honeypot Investigation: MySQL Extortion Activity
 
-## 🚨 Threat Hunting and Security Operations
+A guided cyber range lab examining malicious database activity on a Windows host in Azure. The investigation brief draws on MySQL query and connection logs, Microsoft Defender for Endpoint exports, and a screenshot of a stored ransom note.
 
-- **[Threat Hunting Scenario (Tor Browser Usage)](https://github.com/joshmadakor0/threat-hunting-scenario-tor)**
+- **Investigation:** Correlates database sessions with destructive SQL statements and ransom-note activity.
+- **Evidence quality:** Identifies misleading authentication labels and explains why reused connection IDs need time and host context.
+- **Reporting:** Separates supported findings from unanswered questions about data theft, remote access, and recovery.
 
-<hr/>
+A sanitized case study is available on request through [LinkedIn](https://www.linkedin.com/in/eminyeromian/). This is a training project; the brief includes retrospective analysis prepared with AI assistance.
 
-## 🤳 Connect With Me
+## Technical focus
 
-[<img align="left" alt="___________ | YouTube" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/youtube.svg" />][youtube]
-[<img align="left" alt="___________ | Twitter" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg" />][twitter]
-[<img align="left" alt="___________ | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
-[<img align="left" alt="___________ | Instagram" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" />][instagram]
+| Area | Current focus |
+| --- | --- |
+| Security operations | Log review, event correlation, incident timelines |
+| Detection and investigation | Microsoft Sentinel, KQL, Microsoft Defender for Endpoint |
+| Foundations | Linux, vulnerability management, threat intelligence |
+| Communication | Evidence-based findings, clear limitations, practical next steps |
 
-[twitter]: https://twitter.com/___________
-[youtube]: https://www.youtube.com/c/___________
-[instagram]: https://www.instagram.com/___________
-[linkedin]: https://linkedin.com/in/___________
+These are areas of study and lab practice. Projects document the evidence available and the scope of work performed.
 
-<!--
-<img width="35" alt="image" src="https://github.com/user-attachments/assets/2f41c7cd-5ea8-4475-b451-a37161b6c3fb"> 
-<img width="35" alt="image" src="https://github.com/user-attachments/assets/77649969-9910-4994-8b96-74a116cfb2a8">
--->
+## Credentials
+
+- CompTIA Cybersecurity Analyst (CySA+)
+- CompTIA Security+
+- Google Cybersecurity Certificate
+
+## Connect
+
+[LinkedIn — Emin Yeromian](https://www.linkedin.com/in/eminyeromian/)
