@@ -2,11 +2,13 @@
 
 **CompTIA CySA+ · Security+**
 
-I’m building practical experience in security operations through a Raspberry Pi home lab and a guided Azure honeypot project. This portfolio covers what I’ve been working on, including the parts that took more than one attempt.
+I’m building practical experience in security operations through a Raspberry Pi home lab and an Azure honeypot lab. This portfolio covers what I’ve been working on, including the parts that took more than one attempt.
 
 ## Projects
 
 ### Raspberry Pi security monitoring lab
+
+DEF CON 34 sparked my curiosity and pushed me to build a lab of my own. That led to a trip to Micro Center and a setup I kept changing as I learned. My goal for the next DEF CON is to get more hands-on with CTFs.
 
 I started with one Raspberry Pi running Kali and Wazuh. As the plan changed, I split the setup into a dedicated Ubuntu monitoring hub and a separate Kali workstation. I wanted the hub to stay home and collect logs while keeping the workstation available for other lab work.
 
@@ -14,11 +16,13 @@ The monitoring setup brings together Wazuh, Suricata, Zeek, and Pi-hole. The hub
 
 My September project notes record a test alert reaching Wazuh. They also cover the changes to the original plan and the troubleshooting behind them. At that review, workstation recovery and some alert tuning were still open.
 
-### Azure honeypot build and investigation
+### Azure honeypot lab
 
-I set up my own Windows VM in Azure for a guided cyber range honeypot project. The lab ran MySQL, with database query logs and Defender for Endpoint exports providing evidence of what happened on the host. The case study follows sessions containing destructive SQL statements and ransom-note activity.
+I built a Windows VM in Azure and populated MySQL with fake corporate data. To observe hostile activity, I deliberately disabled Windows Firewall and configured the network security group (NSG) to allow all inbound traffic.
 
-The report separates what the evidence shows from what remains uncertain. A stored ransom note supports an extortion finding; it does not, by itself, prove data theft. The available Windows logons also do not establish an RDP compromise.
+I used KQL to investigate MySQL queries and Windows events. The logs captured destructive SQL targeting the lab data and repeated ransom-note activity. A later sequence targeted an existing note table before inserting another note. The timing suggested automation, but the number of attackers remains uncertain.
+
+For containment, I removed the allow-all inbound NSG rule. My lab notes also record isolation through Defender for Endpoint. The case study covers the build, investigation, containment steps, and what the evidence could establish.
 
 ## Tools I’m working with
 
