@@ -10,11 +10,18 @@ I’m building practical experience in security operations through a Raspberry P
 
 DEF CON 34 sparked my curiosity and pushed me to build a lab of my own. That led to a trip to Micro Center and a setup I kept changing as I learned. My goal for the next DEF CON is to get more hands-on with CTFs.
 
-I started with one Raspberry Pi running Kali and Wazuh. As the plan changed, I split the setup into a dedicated Ubuntu monitoring hub and a separate Kali workstation. I wanted the hub to stay home and collect logs while keeping the workstation available for other lab work.
+I started with one Raspberry Pi running Kali and Wazuh. I wanted a portable Kali device, but I also needed monitoring that could stay home and keep collecting logs. The build changed as those two jobs became clearer.
 
-The monitoring setup brings together Wazuh, Suricata, Zeek, and Pi-hole. The hub moved from microSD to NVMe storage and uses mirrored network traffic, with separate interfaces for capture and management.
+| Problem | What I changed |
+| --- | --- |
+| One Pi was doing both workstation and monitoring work | Split it into a dedicated Ubuntu monitoring hub and a separate Kali Pi |
+| Constant log and index writes raised concerns about SD-card wear and storage performance | Moved to NVMe storage |
+| The storage clone left the hub's boot partitions ambiguous | Used unique partition IDs and checked that the hub booted with the SD card removed |
+| The capture adapter did not appear in Linux | Traced the problem to its USB connection and corrected the cabling |
 
-My September project notes record a test alert reaching Wazuh. They also cover the changes to the original plan and the troubleshooting behind them. At that review, workstation recovery and some alert tuning were still open.
+The hub runs Wazuh, Suricata, Zeek, and Pi-hole, with separate capture and management interfaces. My September notes record network events and a test alert reaching Wazuh.
+
+The portable Kali idea has evolved too. Kali now runs from NVMe, connected to my switch, and I access it over SSH without a display.
 
 ### Azure honeypot lab
 
