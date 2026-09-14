@@ -14,9 +14,9 @@ The monitoring setup brings together Wazuh, Suricata, Zeek, and Pi-hole. The hub
 
 My September project notes record a test alert reaching Wazuh. They also cover the changes to the original plan and the troubleshooting behind them. At that review, workstation recovery and some alert tuning were still open.
 
-### Azure honeypot investigation
+### Azure honeypot build and investigation
 
-A guided cyber range project focused on MySQL activity on a Windows host in Azure. The case study follows database sessions containing destructive SQL statements and ransom-note activity, using query logs and Defender for Endpoint exports.
+I set up my own Windows VM in Azure for a guided cyber range honeypot project. The lab ran MySQL, with database query logs and Defender for Endpoint exports providing evidence of what happened on the host. The case study follows sessions containing destructive SQL statements and ransom-note activity.
 
 The report separates what the evidence shows from what remains uncertain. A stored ransom note supports an extortion finding; it does not, by itself, prove data theft. The available Windows logons also do not establish an RDP compromise.
 
