@@ -19,7 +19,7 @@ I started with one Raspberry Pi running Kali and Wazuh. I wanted a portable Kali
 | The storage clone left the hub's boot partitions ambiguous | Used unique partition IDs and checked that the hub booted with the SD card removed |
 | The capture adapter did not appear in Linux | Traced the problem to its USB connection and corrected the cabling |
 
-The hub runs Wazuh, Suricata, Zeek, and Pi-hole, with separate capture and management interfaces. My September notes record network events and a test alert reaching Wazuh.
+The hub runs Wazuh, Suricata, Zeek, and Pi-hole, with separate capture and management interfaces. My September project log records network events reaching Wazuh and a controlled Windows process test appearing in its dashboard.
 
 The portable Kali idea has evolved too. Kali now runs from NVMe, connected to my switch, and I access it over SSH without a display.
 
@@ -29,7 +29,7 @@ I built a Windows VM in Azure and populated MySQL with fake corporate data. To o
 
 I used KQL to investigate MySQL queries and Windows events. The logs captured destructive SQL targeting the lab data and repeated ransom-note activity. A later sequence targeted an existing note table before inserting another note. The timing suggested automation, but the number of attackers remains uncertain.
 
-For containment, I removed the allow-all inbound NSG rule. My lab notes also record isolation through Defender for Endpoint. The case study covers the build, investigation, containment steps, and what the evidence could establish.
+For containment, I removed the allow-all inbound NSG rule. I also re-enabled Windows Firewall, changed the weak administrator password, and disabled the Guest account. My lab notes record isolation through Defender for Endpoint. The case study covers the build, investigation, response steps, and what the evidence could establish.
 
 ## Tools I’m working with
 
