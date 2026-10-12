@@ -2,39 +2,46 @@
 
 **CompTIA CySA+ · Security+**
 
-I’m building practical experience in security operations through a Raspberry Pi home lab and an Azure honeypot lab. This portfolio covers what I’ve been working on, including the parts that took more than one attempt.
+I'm studying cybersecurity and building practical experience with Linux, network monitoring, and incident investigation. My background is in retail leadership, and I'm working toward a cybersecurity or networking role.
 
 ## Projects
 
 ### Raspberry Pi security monitoring lab
 
-DEF CON 34 sparked my curiosity and pushed me to build a lab of my own. That led to a trip to Micro Center and a setup I kept changing as I learned. My goal for the next DEF CON is to get more hands-on with CTFs.
+I built an Ubuntu monitoring hub around Wazuh, Suricata, Zeek, and Pi-hole, with separate management and capture interfaces. A second Pi runs Kali from NVMe, connects to my switch, and is accessed over SSH without a display.
 
-I started with one Raspberry Pi running Kali and Wazuh. I wanted a portable Kali device, but I also needed monitoring that could stay home and keep collecting logs. The build changed as those two jobs became clearer.
+I started with one Pi doing both jobs. Splitting them let monitoring stay home while Kali had its own role. Along the way, I worked through storage and capture issues:
 
 | Problem | What I changed |
 | --- | --- |
-| One Pi was doing both workstation and monitoring work | Split it into a dedicated Ubuntu monitoring hub and a separate Kali Pi |
+| One Pi handled both Kali and monitoring | Split the work between an Ubuntu hub and a separate Kali Pi |
 | Constant log and index writes raised concerns about SD-card wear and storage performance | Moved to NVMe storage |
 | The storage clone left the hub's boot partitions ambiguous | Used unique partition IDs and checked that the hub booted with the SD card removed |
-| The capture adapter did not appear in Linux | Traced the problem to its USB connection and corrected the cabling |
+| The capture adapter did not appear in Linux | Traced the issue to its USB connection and corrected the cabling |
 
-The hub runs Wazuh, Suricata, Zeek, and Pi-hole, with separate capture and management interfaces. My September project log records network events reaching Wazuh and a controlled Windows process test appearing in its dashboard.
+**Checks from the lab:**
 
-The portable Kali idea has evolved too. Kali now runs from NVMe, connected to my switch, and I access it over SSH without a display.
+- **DNS filtering:** checked resolution and blocking through Pi-hole from both the hub and Kali.
+- **Syslog:** configured Wazuh to accept UniFi syslog over UDP and TCP and verified both listeners.
+- **Monitoring:** my September project log records network events and a controlled Windows process test appearing in Wazuh's dashboard.
+- **Health checks:** used a Python script to check services, log freshness, alerts, and network interfaces.
+
+[Read the home SOC walkthrough](docs/home-soc-walkthrough.md) for the layout, troubleshooting, and a repeatable Windows test procedure.
+
+DEF CON 34 pushed me to build a lab of my own. My goal for the next DEF CON is to get more hands-on with CTFs.
 
 ### Azure honeypot lab
 
-I built a Windows VM in Azure and populated MySQL with fake corporate data. To observe hostile activity, I deliberately disabled Windows Firewall and configured the network security group (NSG) to allow all inbound traffic.
+I built an Azure honeypot with synthetic corporate data in MySQL. I used KQL and SQL to investigate destructive database queries and ransom-note activity, and documented the incident timeline and containment.
 
-I used KQL to investigate MySQL queries and Windows events. The logs captured destructive SQL targeting the lab data and repeated ransom-note activity. A later sequence targeted an existing note table before inserting another note. The timing suggested automation, but the number of attackers remains uncertain.
+My follow-up work included tightening inbound NSG access, re-enabling Windows Firewall, updating administrator credentials, and disabling the Guest account. My lab notes also record isolation through Defender for Endpoint.
 
-For containment, I removed the allow-all inbound NSG rule. I also re-enabled Windows Firewall, changed the weak administrator password, and disabled the Guest account. My lab notes record isolation through Defender for Endpoint. The case study covers the build, investigation, response steps, and what the evidence could establish.
+## Tools I'm working with
 
-## Tools I’m working with
-
-- **Home lab:** Linux, Wazuh, Suricata, Zeek, Pi-hole
+- **Home lab:** Linux, Wazuh, Suricata, Zeek, Pi-hole, SSH
 - **Azure lab and study:** Microsoft Sentinel, Defender for Endpoint, KQL, MySQL logs
+
+I'm also studying for the CCNA.
 
 ## Certifications
 
@@ -45,3 +52,4 @@ For containment, I removed the allow-all inbound NSG rule. I also re-enabled Win
 ## Contact
 
 [Connect with me on LinkedIn](https://www.linkedin.com/in/eminyeromian/). Project summaries with private details removed are available on request.
+

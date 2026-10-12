@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 560" width="980" height="560" role="img" aria-labelledby="title desc" font-family="Arial, Helvetica, sans-serif">
+  <title id="title">Raspberry Pi monitoring lab</title>
+  <desc id="desc">Logical view of the lab build. A switch connects the headless Kali Pi and Ubuntu hub management interface. A separate capture interface connects to Suricata and Zeek. The hub also hosts Wazuh and Pi-hole, and receives Windows endpoint events. No private addresses or exact port assignments are shown.</desc>
+  <rect x="0" y="0" width="980" height="560" rx="12" fill="#ffffff" />
+  <defs>
+    <marker id="flow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#26866f" />
+    </marker>
+  </defs>
+  <text x="28" y="36" fill="#15344d" font-size="25" text-anchor="start" font-weight="700">
+    <tspan x="28" dy="0">Raspberry Pi monitoring lab</tspan>
+  </text>
+  <text x="28" y="66" fill="#537087" font-size="17" text-anchor="start" font-weight="400">
+    <tspan x="28" dy="0">Separate roles for management, packet capture, and endpoint events</tspan>
+  </text>
+  <rect x="280" y="158" width="465" height="330" rx="12" fill="#f7fafc" stroke="#a8bccb" stroke-width="1.5" />
+  <text x="300" y="189" fill="#15344d" font-size="20" text-anchor="start" font-weight="700">
+    <tspan x="300" dy="0">Ubuntu monitoring Pi / NVMe</tspan>
+  </text>
+  <polyline points="220,252 310,252" fill="none" stroke="#5f7e96" stroke-width="2.5" stroke-linejoin="round" />
+  <polyline points="130,288 130,367" fill="none" stroke="#5f7e96" stroke-width="2.5" stroke-linejoin="round" />
+  <polyline points="395,284 395,331" fill="none" stroke="#5f7e96" stroke-width="2.5" stroke-linejoin="round" />
+  <polyline points="395,252 490,252 490,443 480,443" fill="none" stroke="#5f7e96" stroke-width="2.5" stroke-linejoin="round" />
+  <polyline points="607,143 607,220" fill="none" stroke="#26866f" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#flow)" />
+  <polyline points="607,284 607,331" fill="none" stroke="#26866f" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#flow)" />
+  <polyline points="780,443 480,443" fill="none" stroke="#26866f" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#flow)" />
+  <rect x="40" y="216" width="180" height="72" rx="9" fill="#edf4fb" stroke="#89a7be" stroke-width="1.5" />
+  <text x="130.0" y="258.0" fill="#15344d" font-size="18" text-anchor="middle" font-weight="400">
+    <tspan x="130.0" dy="0">Switch</tspan>
+  </text>
+  <rect x="40" y="367" width="180" height="100" rx="9" fill="#edf4fb" stroke="#89a7be" stroke-width="1.5" />
+  <text x="130.0" y="411.0" fill="#15344d" font-size="18" text-anchor="middle" font-weight="400">
+    <tspan x="130.0" dy="0">Headless Kali Pi</tspan>
+    <tspan x="130.0" dy="24">NVMe / SSH</tspan>
+  </text>
+  <rect x="310" y="220" width="170" height="64" rx="9" fill="#edf4fb" stroke="#89a7be" stroke-width="1.5" />
+  <text x="395.0" y="246.0" fill="#15344d" font-size="18" text-anchor="middle" font-weight="400">
+    <tspan x="395.0" dy="0">Management</tspan>
+    <tspan x="395.0" dy="24">interface</tspan>
+  </text>
+  <rect x="505" y="220" width="205" height="64" rx="9" fill="#eaf6f2" stroke="#75b3a2" stroke-width="1.5" />
+  <text x="607.5" y="258.0" fill="#15344d" font-size="18" text-anchor="middle" font-weight="400">
+    <tspan x="607.5" dy="0">Capture interface</tspan>
+  </text>
+  <rect x="310" y="331" width="170" height="64" rx="9" fill="#edf4fb" stroke="#89a7be" stroke-width="1.5" />
+  <text x="395.0" y="369.0" fill="#15344d" font-size="18" text-anchor="middle" font-weight="400">
+    <tspan x="395.0" dy="0">Pi-hole</tspan>
+  </text>
+  <rect x="505" y="331" width="205" height="64" rx="9" fill="#eaf6f2" stroke="#75b3a2" stroke-width="1.5" />
+  <text x="607.5" y="369.0" fill="#15344d" font-size="18" text-anchor="middle" font-weight="400">
+    <tspan x="607.5" dy="0">Suricata / Zeek</tspan>
+  </text>
+  <rect x="310" y="411" width="170" height="64" rx="9" fill="#edf4fb" stroke="#89a7be" stroke-width="1.5" />
+  <text x="395.0" y="449.0" fill="#15344d" font-size="18" text-anchor="middle" font-weight="400">
+    <tspan x="395.0" dy="0">Wazuh</tspan>
+  </text>
+  <rect x="450" y="94" width="315" height="49" rx="9" fill="#eaf6f2" stroke="#75b3a2" stroke-width="1.5" />
+  <text x="607.5" y="124.5" fill="#15344d" font-size="18" text-anchor="middle" font-weight="400">
+    <tspan x="607.5" dy="0">Network capture feed</tspan>
+  </text>
+  <rect x="780" y="397" width="175" height="92" rx="9" fill="#eaf6f2" stroke="#75b3a2" stroke-width="1.5" />
+  <text x="867.5" y="437.0" fill="#15344d" font-size="18" text-anchor="middle" font-weight="400">
+    <tspan x="867.5" dy="0">Windows test</tspan>
+    <tspan x="867.5" dy="24">endpoint</tspan>
+  </text>
+  <text x="782" y="362" fill="#26866f" font-size="16" text-anchor="start" font-weight="400">
+    <tspan x="782" dy="0">Endpoint events</tspan>
+  </text>
+  <text x="28" y="529" fill="#537087" font-size="16" text-anchor="start" font-weight="400">
+    <tspan x="28" dy="0">Logical view of the lab build; exact port assignments and capture-feed placement are omitted.</tspan>
+  </text>
+</svg>
