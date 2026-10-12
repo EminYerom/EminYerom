@@ -2,7 +2,7 @@
 
 **CompTIA CySA+ · Security+**
 
-I'm pursuing a cybersecurity degree and building hands-on experience for cybersecurity and networking roles. My projects focus on Linux, network monitoring, log analysis, and incident investigation. I also have a background in retail leadership.
+I'm studying cybersecurity and building practical experience with Linux, network monitoring, and incident investigation. My background is in retail leadership, and I'm working toward a cybersecurity or networking role.
 
 ## Projects
 
@@ -19,7 +19,12 @@ I started with one Pi doing both jobs. Splitting them let monitoring stay home w
 | The storage clone left the hub's boot partitions ambiguous | Used unique partition IDs and checked that the hub booted with the SD card removed |
 | The capture adapter did not appear in Linux | Traced the issue to its USB connection and corrected the cabling |
 
-I checked DNS resolution and blocking through Pi-hole from both the hub and Kali. I also configured Wazuh to accept UniFi syslog over UDP and TCP and verified both listeners. My September project log records network events reaching Wazuh and a controlled Windows process test appearing in its dashboard. I also used a Python health-check script to check services, log freshness, alerts, and network interfaces.
+**Checks from the lab:**
+
+- **DNS filtering:** checked resolution and blocking through Pi-hole from both the hub and Kali.
+- **Syslog:** configured Wazuh to accept UniFi syslog over UDP and TCP and verified both listeners.
+- **Monitoring:** my September project log records network events and a controlled Windows process test appearing in Wazuh's dashboard.
+- **Health checks:** used a Python script to check services, log freshness, alerts, and network interfaces.
 
 [Read the home SOC walkthrough](docs/home-soc-walkthrough.md) for the layout, troubleshooting, and a repeatable Windows test procedure.
 

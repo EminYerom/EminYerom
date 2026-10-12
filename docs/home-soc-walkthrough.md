@@ -41,6 +41,9 @@ The earlier Windows test appeared in Wazuh's dashboard. This is a separate proce
 
 `cmd.exe marker → Sysmon Event ID 1 → Wazuh agent → manager rule → alert → dashboard`
 
+<details>
+<summary>Test setup and steps</summary>
+
 **Setup:** use an owned Windows lab endpoint with Sysmon process-creation logging and an enrolled Wazuh agent collecting `Microsoft-Windows-Sysmon/Operational`. Check that the test rule is loaded, its level meets the alert threshold, and no active response acts on it. Keep the clocks synchronized and use the field names from the installed decoder.
 
 The agent's channel-collection block is:
@@ -87,5 +90,7 @@ This proposed custom rule matches the marker in a Sysmon process event. It hasn'
 A matching alert checks this endpoint's collection path and the marker rule. Network-capture coverage needs a separate test.
 
 References: [Microsoft Sysmon](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon), [Wazuh event collection](https://documentation.wazuh.com/current/user-manual/capabilities/log-data-collection/configuration.html), [custom rules](https://documentation.wazuh.com/current/user-manual/ruleset/rules/custom.html), [Sysmon rule group](https://github.com/wazuh/wazuh/blob/v4.14.0/ruleset/rules/0595-win-sysmon_rules.xml), and [command-line field examples](https://wazuh.com/blog/monitoring-commonly-abused-windows-utilities/).
+
+</details>
 
 I've also added a Ubiquiti gateway, switch, and U7 Pro AP. Segmented IoT monitoring is the next networking goal; it needs its own capture and visibility checks.
