@@ -6,6 +6,8 @@ I’m building practical experience in security operations through a Raspberry P
 
 ## Projects
 
+My original logs, screenshots, and full Azure case study aren't published here yet.
+
 ### Raspberry Pi security monitoring lab
 
 DEF CON 34 sparked my curiosity and pushed me to build a lab of my own. That led to a trip to Micro Center and a setup I kept changing as I learned. My goal for the next DEF CON is to get more hands-on with CTFs.
@@ -21,6 +23,8 @@ I started with one Raspberry Pi running Kali and Wazuh. I wanted a portable Kali
 
 The hub runs Wazuh, Suricata, Zeek, and Pi-hole, with separate capture and management interfaces. My September project log records network events reaching Wazuh and a controlled Windows process test appearing in its dashboard.
 
+I've added a [home SOC walkthrough](docs/home-soc-walkthrough.md) with the lab layout, a Windows test to run, and the evidence I still need to collect.
+
 The portable Kali idea has evolved too. Kali now runs from NVMe, connected to my switch, and I access it over SSH without a display.
 
 ### Azure honeypot lab
@@ -29,7 +33,7 @@ I built a Windows VM in Azure and populated MySQL with fake corporate data. To o
 
 I used KQL to investigate MySQL queries and Windows events. The logs captured destructive SQL targeting the lab data and repeated ransom-note activity. A later sequence targeted an existing note table before inserting another note. The timing suggested automation, but the number of attackers remains uncertain.
 
-For containment, I removed the allow-all inbound NSG rule. I also re-enabled Windows Firewall, changed the weak administrator password, and disabled the Guest account. My lab notes record isolation through Defender for Endpoint. The case study covers the build, investigation, response steps, and what the evidence could establish.
+For containment, I removed the allow-all inbound NSG rule. I also re-enabled Windows Firewall, changed the weak administrator password, and disabled the Guest account. My lab notes record isolation through Defender for Endpoint. My unpublished case study covers the build, investigation, response steps, and what the evidence could establish.
 
 ## Tools I’m working with
 
@@ -45,3 +49,4 @@ For containment, I removed the allow-all inbound NSG rule. I also re-enabled Win
 ## Contact
 
 [Connect with me on LinkedIn](https://www.linkedin.com/in/eminyeromian/). Project summaries with private details removed are available on request.
+
